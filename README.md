@@ -7,34 +7,61 @@
 
 Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system.
 
-To help process this data, you will create machine learning models capable of classifying candidate exoplanets from the raw dataset.
+## Task
+Create machine learning models capable of classifying candidate exoplanets from the raw dataset.
 
-In this homework assignment, you will need to:
 
-1. [Preprocess the raw data](#Preprocessing)
-2. [Tune the models](#Tune-Model-Parameters)
-3. [Compare two or more models](#Evaluate-Model-Performance)
-
-- - -
-
-## Instructions
+## Process
 
 ### Preprocess the Data
 
-* Preprocess the dataset prior to fitting the model.
-* Perform feature selection and remove unnecessary features.
-* Use `MinMaxScaler` to scale the numerical data.
-* Separate the data into training and testing data.
+* Preprocessed the dataset prior to fitting the model.
+* Performed feature selection and remove unnecessary features.
+* Used `MinMaxScaler` to scale the numerical data.
+* Separated the data into training and testing data.
 
 ### Tune Model Parameters
 
-* Use `GridSearch` to tune model parameters.
-* Tune and compare at least two different classifiers.
+* Used `GridSearch` to tune model parameters.
+* Tune and compare different classifiers like Logistic Regression, K-Nearest Neighbours, Support Vector Machine, Random Forest Classifier.
 
-### Reporting
 
-* README that reports a comparison of each model's performance as well as a summary about your findings and any assumptions you can make based on your model (is your model good enough to predict new exoplanets? Why or why not? What would make your model be better at predicting new exoplanets?).
+# Conclusion
+### After comparing all the models, it looks like Random Forest Classifier gives the best Accuracy Score.
 
+### Logistic Regression Score
+* Training Data Score: 0.8411214953271028
+* Testing Data Score: 0.8409610983981693
+
+### KNN Score without Gridsearch
+* Training Data Score: 0.8725920274651917
+* Testing Data Score: 0.8249427917620137
+
+### KNN Score with Gridsearch
+* Training Data Score: 0.8725920274651917
+* Testing Data Score: 0.8249427917620137
+
+### SVM without Gridsearch
+* Training Data Score: 0.8439824527942018
+* Testing Data Score: 0.8415331807780321
+
+### SVM with Gridsearch
+* Training Data Score: 0.8901392332633988
+* Testing Data Score: 0.8861556064073226
+
+### SVM Classification Report
+![SVMClassifier](Images/SVMClassifier.png)
+
+### Random Forest Classifier Score without Gridsearch
+* Training Data Score: 0.996185390043868
+* Testing Data Score: 0.8729977116704806
+
+### Random Forest Classifier Score with Gridsearch
+* Training Data Score: 1.0
+* Testing Data Score: 0.8907322654462243
+
+### Random Forest Classification report
+![RandomForestClassifier](Images/RandomForestClassifier.png)
 - - -
 
 ## Resources
