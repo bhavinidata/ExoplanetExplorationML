@@ -13138,8 +13138,8 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already up-to-date: sklearn in /Users/bhavinivyas/anaconda3/lib/python3.7/site-packages (0.0)
 Requirement already satisfied, skipping upgrade: scikit-learn in /Users/bhavinivyas/anaconda3/lib/python3.7/site-packages (from sklearn) (0.20.3)
-Requirement already satisfied, skipping upgrade: scipy&gt;=0.13.3 in /Users/bhavinivyas/anaconda3/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.2.1)
 Requirement already satisfied, skipping upgrade: numpy&gt;=1.8.2 in /Users/bhavinivyas/anaconda3/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.16.2)
+Requirement already satisfied, skipping upgrade: scipy&gt;=0.13.3 in /Users/bhavinivyas/anaconda3/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.2.1)
 </pre>
 </div>
 </div>
@@ -14826,8 +14826,8 @@ FALSE POSITIVE       0.98      1.00      0.99       876
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Training Data Score with Random Forest Classifier: 0.9937058935723823
-Testing Data Score with Random Forest Classifier: 0.8844393592677345
+<pre>Training Data Score with Random Forest Classifier: 0.996185390043868
+Testing Data Score with Random Forest Classifier: 0.8729977116704806
 </pre>
 </div>
 </div>
@@ -14942,8 +14942,8 @@ Testing Data Score with Random Forest Classifier: 0.8844393592677345
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.8970055311844364
-{&#39;max_depth&#39;: 100, &#39;n_estimators&#39;: 250}
+<pre>0.8989128361625024
+{&#39;max_depth&#39;: 200, &#39;n_estimators&#39;: 150}
 </pre>
 </div>
 </div>
@@ -14983,7 +14983,7 @@ Testing Data Score with Random Forest Classifier: 0.8844393592677345
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training Data Score with Random Forest Classifier with grid search: 1.0
-Testing Data Score with Random Forest Classifier with grid search: 0.8924485125858124
+Testing Data Score with Random Forest Classifier with grid search: 0.8907322654462243
 </pre>
 </div>
 </div>
@@ -15036,12 +15036,12 @@ Testing Data Score with Random Forest Classifier with grid search: 0.89244851258
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                precision    recall  f1-score   support
 
-     CANDIDATE       0.82      0.74      0.78       422
-     CONFIRMED       0.80      0.83      0.81       450
+     CANDIDATE       0.82      0.73      0.78       422
+     CONFIRMED       0.79      0.83      0.81       450
 FALSE POSITIVE       0.97      1.00      0.98       876
 
      micro avg       0.89      0.89      0.89      1748
-     macro avg       0.86      0.86      0.86      1748
+     macro avg       0.86      0.85      0.86      1748
   weighted avg       0.89      0.89      0.89      1748
 
 </pre>
@@ -15106,6 +15106,464 @@ FALSE POSITIVE       0.97      1.00      0.98       876
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logistic-Regression-Model">Logistic Regression Model<a class="anchor-link" href="#Logistic-Regression-Model">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span><span class="p">,</span> <span class="n">LinearRegression</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lcf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lcf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/bhavinivyas/anaconda3/lib/python3.7/site-packages/sklearn/linear_model/logistic.py:433: FutureWarning: Default solver will be changed to &#39;lbfgs&#39; in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/Users/bhavinivyas/anaconda3/lib/python3.7/site-packages/sklearn/linear_model/logistic.py:460: FutureWarning: Default multi_class will be changed to &#39;auto&#39; in 0.22. Specify the multi_class option to silence this warning.
+  &#34;this warning.&#34;, FutureWarning)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[39]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class=&#39;warn&#39;,
+          n_jobs=None, penalty=&#39;l2&#39;, random_state=None, solver=&#39;warn&#39;,
+          tol=0.0001, verbose=0, warm_start=False)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logistic-Regression-Model-Accuracy">Logistic Regression Model Accuracy<a class="anchor-link" href="#Logistic-Regression-Model-Accuracy">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Training Data Score with Logistic Regression Classifier: {lcf.score(X_train_scaled, y_train)}&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Testing Data Score with Logistic Regression Classifier: {lcf.score(X_test_scaled, y_test)}&quot;</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training Data Score with Logistic Regression Classifier: 0.8411214953271028
+Testing Data Score with Logistic Regression Classifier: 0.8409610983981693
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="K-Nearest-Neighbourhood">K Nearest Neighbourhood<a class="anchor-link" href="#K-Nearest-Neighbourhood">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
+           metric_params=None, n_jobs=None, n_neighbors=5, p=2,
+           weights=&#39;uniform&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Training Data Score with KNN Classifier: {knn.score(X_train_scaled, y_train)}&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Testing Data Score with KNN Classifier: {knn.score(X_test_scaled, y_test)}&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training Data Score with KNN Classifier: 0.8725920274651917
+Testing Data Score with KNN Classifier: 0.8249427917620137
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">paramgrid_knn</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n_neighbors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span> <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_knn</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">paramgrid_knn</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/bhavinivyas/anaconda3/lib/python3.7/site-packages/sklearn/model_selection/_split.py:2053: FutureWarning: You should specify a value for &#39;cv&#39; instead of relying on the default value. The default value will change from 3 to 5 in version 0.22.
+  warnings.warn(CV_WARNING, FutureWarning)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>GridSearchCV(cv=&#39;warn&#39;, error_score=&#39;raise-deprecating&#39;,
+       estimator=KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;,
+           metric_params=None, n_jobs=None, n_neighbors=5, p=2,
+           weights=&#39;uniform&#39;),
+       fit_params=None, iid=&#39;warn&#39;, n_jobs=None,
+       param_grid={&#39;n_neighbors&#39;: [5, 10, 20]}, pre_dispatch=&#39;2*n_jobs&#39;,
+       refit=True, return_train_score=&#39;warn&#39;, scoring=None, verbose=0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_knn</span><span class="o">.</span><span class="n">best_params_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[48]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;n_neighbors&#39;: 20}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="KNN-Accuracy">KNN Accuracy<a class="anchor-link" href="#KNN-Accuracy">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Training Data Score with KNN Classifier with Gridsearch: {knn.score(X_train_scaled, y_train)}&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Testing Data Score with KNN Classifier with Gridsearch: {knn.score(X_test_scaled, y_test)}&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training Data Score with KNN Classifier with Gridsearch: 0.8725920274651917
+Testing Data Score with KNN Classifier with Gridsearch: 0.8249427917620137
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><h3 id="After-comparing-all-the-models,-it-looks-like-Random-Forest-Classifier-gives-the-best-Accuracy-Score.">After comparing all the models, it looks like Random Forest Classifier gives the best Accuracy Score.<a class="anchor-link" href="#After-comparing-all-the-models,-it-looks-like-Random-Forest-Classifier-gives-the-best-Accuracy-Score.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logistic-Regression-Score">Logistic Regression Score<a class="anchor-link" href="#Logistic-Regression-Score">&#182;</a></h3><ul>
+<li>Training Data Score: 0.8411214953271028</li>
+<li>Testing Data Score: 0.8409610983981693</li>
+</ul>
+<h3 id="KNN-Score-without-Gridsearch">KNN Score without Gridsearch<a class="anchor-link" href="#KNN-Score-without-Gridsearch">&#182;</a></h3><ul>
+<li>Training Data Score: 0.8725920274651917</li>
+<li>Testing Data Score: 0.8249427917620137</li>
+</ul>
+<h3 id="KNN-Score-with-Gridsearch">KNN Score with Gridsearch<a class="anchor-link" href="#KNN-Score-with-Gridsearch">&#182;</a></h3><ul>
+<li>Training Data Score: 0.8725920274651917</li>
+<li>Testing Data Score: 0.8249427917620137</li>
+</ul>
+<h3 id="SVM-without-Gridsearch">SVM without Gridsearch<a class="anchor-link" href="#SVM-without-Gridsearch">&#182;</a></h3><ul>
+<li>Training Data Score: 0.8439824527942018</li>
+<li>Testing Data Score: 0.8415331807780321</li>
+</ul>
+<h3 id="SVM-with-Gridsearch">SVM with Gridsearch<a class="anchor-link" href="#SVM-with-Gridsearch">&#182;</a></h3><ul>
+<li>Training Data Score: 0.8901392332633988</li>
+<li>Testing Data Score: 0.8861556064073226</li>
+</ul>
+<h3 id="SVM-Classification-Report">SVM Classification Report<a class="anchor-link" href="#SVM-Classification-Report">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>            precision    recall  f1-score   support
+
+ CANDIDATE       0.84      0.69      0.76       422
+ CONFIRMED       0.75      0.85      0.80       450
+ FALSE POSITIVE  0.98      1.00      0.99       876
+
+ micro avg       0.89      0.89      0.89      1748
+ macro avg       0.86      0.85      0.85      1748
+ weighted avg    0.89      0.89      0.88      1748</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Random-Forest-Classifier-Score-without-Gridsearch">Random Forest Classifier Score without Gridsearch<a class="anchor-link" href="#Random-Forest-Classifier-Score-without-Gridsearch">&#182;</a></h3><ul>
+<li>Training Data Score: 0.996185390043868</li>
+<li>Testing Data Score: 0.8729977116704806</li>
+</ul>
+<h3 id="Random-Forest-Classifier-Score-with-Gridsearch">Random Forest Classifier Score with Gridsearch<a class="anchor-link" href="#Random-Forest-Classifier-Score-with-Gridsearch">&#182;</a></h3><ul>
+<li>Training Data Score: 1.0</li>
+<li>Testing Data Score: 0.8907322654462243</li>
+</ul>
+<h3 id="Random-Forest-Classification-report">Random Forest Classification report<a class="anchor-link" href="#Random-Forest-Classification-report">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>            precision    recall  f1-score   support
+
+ CANDIDATE       0.82      0.74      0.78       422
+ CONFIRMED       0.80      0.83      0.81       450
+ FALSE POSITIVE  0.97      1.00      0.98       876
+
+ micro avg       0.89      0.89      0.89      1748
+ macro avg       0.86      0.86      0.86      1748
+ weighted avg    0.89      0.89      0.89      1748</code></pre>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
